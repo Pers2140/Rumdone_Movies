@@ -1,0 +1,37 @@
+body{
+  background:black;
+  text-align:center;
+  font-size:30px;
+}
+h1{
+  margin-top:100px;
+  color:white;
+  font-family:monospace;
+}
+h1>a{
+  text-decoration: none!important;
+}
+#wrapper{
+  height:300px;
+  width:500px;
+  text-align:center;
+  text-shadow:9px 3px 14px #855;
+  line-height:200px;
+  font-family:monospace;
+  font-size:15px;
+  margin:auto;
+  color:white;
+}
+#text{
+  position:absolute;
+}
+img{
+  width:55px;
+  height:55px;
+  animation:bob .5s linear alternate infinite;
+}
+@keyframes bob{
+  to{
+    transform:rotate(45deg);
+  }
+}

@@ -1,0 +1,145 @@
+#wait{
+    margin:auto;
+    text-align: center;
+    color:#264653;
+}
+.blocks{
+    text-align:center;
+    padding: 5px;
+}
+
+.title{
+    font-size: 4em;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+.info{
+    text-align: center;
+}
+
+.movie-holder{
+    width:100%;
+    text-align:center;
+    margin:auto;
+    position: relative;
+    top:50px;
+}
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
+.movie-card{
+    /* border:2px dashed red; */
+    width:100%;
+    text-align:center;
+    min-height:800px;
+
+}
+.score{
+    border-radius: 50px;
+    width:80px;
+    height:80px;
+    background:#1B1B1B;
+    opacity:0;
+    position: absolute;
+    top:20px;
+    left:20px;
+    border:4px inset white;
+    animation: score 2s linear 2s forwards;
+}
+.score p{
+    color:white;
+    position: relative;
+    top:22px;
+    margin: auto;
+    font-size: 19px;
+}
+@keyframes score {
+    to {opacity:.8;}
+}
+.movie-card:hover{
+    transform: scale(1.05);
+    transition-duration: .5s;
+}
+.card{
+    opacity: 0;
+    animation: card 1s linear 1s forwards;
+}
+@keyframes card {
+    to {opacity:1;}
+}
+.card-img{
+    max-width:100%;
+    max-height:550px;
+    margin-bottom:10px;
+}
+.popup-img{
+    max-width:100%;
+    height:auto;
+}
+.poster-button{
+    width:50%;
+    height:455px;
+    opacity:80%;
+    position: absolute;
+    left:25%;
+    z-index: 3000;
+}
+.poster-button img{
+    position: relative;
+    margin-top:80%;
+}
+.poster-button img:hover{
+    transform:scale(1.05)
+}
+.genre{
+    width:90%;
+    margin:auto;
+}
+
+#plot{
+    font-size:22px;
+    margin:10px;
+}
+.episodes p{
+    position: relative;
+    color:white;
+    font-size: .2vm;
+    margin: 5px;
+}
+.episodes p:hover{
+    transform: scale(1.05);
+    margin:10px;
+}
+#sodes_butt{
+    color:black;
+    border-radius: 4px;
+}
+.pre_btn{
+    background:white;
+}
+.return{
+    
+}
+#search-con{
+    width: 10%;
+    margin:auto;
+    position: fixed;
+    top:80px;
+    z-index:100;
+    animation: bounce 1s ease-in-out 2s infinite alternate;
+}
+@keyframes bounce {
+    to {transform: translateX(50px);}
+}
+#search-con:hover{
+    width: 20%;
+    animation: none;
+}
+
+#search::placeholder{
+    color:#003049;
+}
+
+
+

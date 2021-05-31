@@ -1,0 +1,21 @@
+.center-box{
+  width: 90%;
+  //border:2px dashed black;
+}
+#output{
+  color:black;
+  //border:2px dashed red;
+  min-height:200px;
+  text-align:left;
+  padding: 5px;
+}
+#messageform{
+
+  width:85%;
+  height:500px;
+  margin:auto;
+}
+#message-input{
+  height:100px;
+  width: 100%;
+}

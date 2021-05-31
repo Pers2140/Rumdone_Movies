@@ -1,0 +1,55 @@
+<head>
+  <title>🌴 RumDone 🌴</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/movies.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<div id="con">
+  <%- include('./nav.ejs') %>
+  <div class="blocker"><button type="button" class=" fullscreen btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-fullscreen"></span> Fullscreen 
+  </button><a href="/movies"><p>Return to Movies<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="return bi bi-arrow-up-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.5 5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6.707l-4.146 4.147a.5.5 0 0 1-.708-.708L9.293 6H6.5a.5.5 0 0 1 0-1z"/>
+  </svg></p></a></div>
+  <iframe class="frame" src="/404" ></iframe>
+  <br><br>
+  <div class="container-fluid">
+    <div id="search-con">
+      <input id="search" class=" form-control" type="text" placeholder="🔎 Title or year 🔎">
+    </div>
+    <div class="row">
+      <br><br>
+      <!-- Loading screen -->
+      <div id="wait">
+        <!-- <img src="cube.png" alt=""> -->
+        <h3>...💨Loading multiple farts💨...</h3>
+        <h3>please wait...</h3>
+
+      </div>
+      <!---->
+      <div id="movies" class="movie-holder col-md-12">
+        <br>
+        <!-- Movies append here-->
+
+      </div>
+    </div>
+
+<!-- Search by year or title -->
+    <script>
+      $(document).ready(function () {
+        $("#search").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#movies .card").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+    </script>
+<!-- search -->
+
+    <br><br><br>
+    <script src="./scripts/create_movies.js"></script>
+    <%- include('./footer.ejs') %>

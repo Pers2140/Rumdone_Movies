@@ -1,2 +1,4 @@
 # Rumdone_Movies
-Movie site served with NODEJS 
+    ## Description
+        > Welcome to my movie site created with NODE JS serving 
+        > EJS pages 
